@@ -1,15 +1,10 @@
 {
-  // Customer module configs
-  "Customer": {
-    "dbConfig": {
-      "host": "localhost",
-      "port": 5984,
-      "dbName": "customers"
+    "Redis": {
+        "Host": "redis",
+        "Port": "6379"
     },
-    "credit": {
-      "initialLimit": 100,
-      // Set low for development
-      "initialDays": 1
+    "Mongo": {
+        "Host": "mongo",
+        "Port": "27017"
     }
-  }
-}
+} 

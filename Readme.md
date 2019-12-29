@@ -23,9 +23,25 @@ Project has 3 main containers:
 1. **Front-End App** (client)
 2. **Back-End App** (server)
 3. **Nginx** (handles requests coming from browser or your local machine)
+4. **MongoDb** (main database)
+5. **Redis** (in-memory data structure store)
 
 FD and BD containers have a development dockerfile and can work independently.
 You don't need to use other containers independently.
+
+#### Docker Compose
+
+Composes these 5 containers and creates a development environment.
+Listens port 3050
+
+For running containers with docker-compose
+`docker-compose up`
+
+For stopping/killing containers
+`docker-compose down`
+
+For building images and running containers (only when docker file changes or new npm modules)
+`docker-compose up --build`
 
 #### Client Container
 
