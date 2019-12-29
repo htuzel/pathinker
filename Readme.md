@@ -10,7 +10,7 @@ You need to run this command:
 And beuww! 
 
 - Go to [http://localhost:3050](http://localhost:3050) for React App
-- Send Requests [http://localhost:3050/api](http://localhost:3050/api) for API
+- Use[http://localhost:3050/api](http://localhost:3050/api) to sending requests to API
 
 ## Basic Commands
 
