@@ -18,6 +18,14 @@
 
 Docker should be installed on your local machine
 
+You need to run this command:
+`docker-compose up`
+
+And beuww! 
+
+- Go to [link](http://localhost:3050) for React App
+- Send Request [link](http://localhost:3050/api) for API
+
 Project has 3 main containers:
 
 1. **Front-End App** (client)
@@ -34,13 +42,13 @@ You don't need to use other containers independently.
 Composes these 5 containers and creates a development environment.
 Listens port 3050
 
-For running containers with docker-compose
+- For running containers with docker-compose
 `docker-compose up`
 
-For stopping/killing containers
+- For stopping/killing containers
 `docker-compose down`
 
-For building images and running containers (only when docker file changes or new npm modules)
+- For building images and running containers (only when docker file changes or new npm modules)
 `docker-compose up --build`
 
 #### Client Container
