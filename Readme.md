@@ -6,7 +6,7 @@
 
 ### Development Environment
 
-#### Docker should be installed on your local machine
+Docker should be installed on your local machine
 
 Project has 2 main containers:
 
