@@ -18,12 +18,14 @@
 
 Docker should be installed on your local machine
 
-Project has 2 main containers:
+Project has 3 main containers:
 
 1. **Front-End App** (client)
 2. **Back-End App** (server)
+3. **Nginx** (handles requests coming from browser or your local machine)
 
-Each container has a development dockerfile and can work independently. 
+FD and BD containers have a development dockerfile and can work independently.
+You don't need to use other containers independently.
 
 #### Client Container
 
@@ -44,3 +46,5 @@ For building container:
 For running container (macos):
 
 `docker run -p 5000:5000 -v /app/node_modules -v $(pwd):/app  <tagname>`
+
+
