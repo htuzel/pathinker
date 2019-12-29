@@ -24,7 +24,7 @@ You need to run this command:
 And beuww! 
 
 - Go to [http://localhost:3050](http://localhost:3050) for React App
-- Send Request [http://localhost:3050/api](http://localhost:3050/api) for API
+- Send Requests [http://localhost:3050/api](http://localhost:3050/api) for API
 
 Project has 3 main containers:
 
