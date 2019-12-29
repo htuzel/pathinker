@@ -12,12 +12,29 @@ And beuww! :tada:
 - Go to [http://localhost:3050](http://localhost:3050) for React App
 - Use [http://localhost:3050/api](http://localhost:3050/api) to sending requests to API
 
+For stopping and removing containers:
+`docker-compose down`
+
 ## Eslint
 
 In related directory;
 
 **For React App:** `npx eslint .` 
 **For Express App:** `npx eslint .`
+
+## Running Tests
+
+In related directory;
+
+**For React App:** `npm test` 
+**For Express App:** `npm test`
+
+## Branch Strategy
+
+Production branch: master
+developing branch: develop
+
+**Before pushing develop and master branch please run eslint and test scripts for client and server directories**
 
 ## Basic Commands
 

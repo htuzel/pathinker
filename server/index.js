@@ -54,7 +54,10 @@ app.get("/", (req, res) => {
 
 });
 
+if (process.env.NODE_ENV !== 'test') {
+    app.listen(5000, err => {
+        console.log("Listening", err);
+    });
+}
 
-app.listen(5000, err => {
-    console.log("Listening", err);
-});
+module.exports = app;
