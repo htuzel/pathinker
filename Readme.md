@@ -31,8 +31,9 @@ In related directory;
 
 ## Branch Strategy
 
-Production branch: master
-developing branch: develop
+- **Production branch: master**
+
+- **Developing branch: develop**
 
 **Before pushing develop and master branch please run eslint and test scripts for client and server directories**
 
