@@ -14,7 +14,9 @@ And beuww! :tada:
 
 ## Eslint
 
-**For React App:** `npx eslint .`
+In related directory;
+
+**For React App:** `npx eslint .` 
 **For Express App:** `npx eslint .`
 
 ## Basic Commands
