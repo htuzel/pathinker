@@ -7,10 +7,10 @@ Docker should be installed on your local machine
 You need to run this command:
 `docker-compose up`
 
-And beuww! 
+And beuww! :tada:
 
 - Go to [http://localhost:3050](http://localhost:3050) for React App
-- Use[http://localhost:3050/api](http://localhost:3050/api) to sending requests to API
+- Use [http://localhost:3050/api](http://localhost:3050/api) to sending requests to API
 
 ## Basic Commands
 
