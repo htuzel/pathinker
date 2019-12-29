@@ -1,8 +1,18 @@
 # Pathinker App
 
+## Basic Commands
 
+### Client
+
+`npm run start`: Creates development server on port 3000 (client)
+`npm run build`: Builds production files
+`npm run test`: Runs client tests
 
 ## DevOps
+
+`npm run dev`: Creates development server on port 5000 (server)
+`npm run start`: runs server for production
+`npm run test`: Runs server tests
 
 ### Development Environment
 
