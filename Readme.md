@@ -12,6 +12,11 @@ And beuww! :tada:
 - Go to [http://localhost:3050](http://localhost:3050) for React App
 - Use [http://localhost:3050/api](http://localhost:3050/api) to sending requests to API
 
+## Eslint
+
+**For React App:** `npx eslint .`
+**For Express App:** `npx eslint .`
+
 ## Basic Commands
 
 ### Client
