@@ -35,7 +35,7 @@ For running container (macos):
 
 `docker run -p 5000:3000 -v /app/node_modules -v $(pwd):/app  <tagname>`
 
-#### Sercer Container
+#### Server Container
 
 For building container:
 
