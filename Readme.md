@@ -33,4 +33,14 @@ For building container:
 
 For running container (macos):
 
-`docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app  <tagname>`
+`docker run -p 5000:3000 -v /app/node_modules -v $(pwd):/app  <tagname>`
+
+#### Sercer Container
+
+For building container:
+
+`docker build -t <tagname> -f Dockerfile.dev .`
+
+For running container (macos):
+
+`docker run -p 5000:5000 -v /app/node_modules -v $(pwd):/app  <tagname>`

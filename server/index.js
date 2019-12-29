@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(helmet())
 
 app.get('/', (req, res) => {
-    res.send('Hi');
+    res.send('Hello World!');
 });
 
 app.listen(5000, err => {
