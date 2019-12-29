@@ -4,7 +4,7 @@
 
 ## DevOps
 
-### Development
+### Development Environment
 
 #### Docker should be installed on your local machine
 
