@@ -1,0 +1,12 @@
+sudo: required
+services:
+    - docker
+
+before_install:
+    - docker build -t hayreddintuzel/react-client-test -f ./client/Dockerfile.dev ./client
+    - docker build -t hayreddintuzel/react-server-test -f ./server/Dockerfile.dev ./server
+
+
+script:
+    - docker run -e CI=true hayreddintuzel/react-client-test npm test
+    - docker run -e CI=true hayreddintuzel/react-server-test npm test
