@@ -1,5 +1,9 @@
 # Pathinker App
 
+## Build Status
+
+[![CircleCI](https://circleci.com/gh/hayreddintuzel/pathinker/tree/master.svg?style=svg)](https://circleci.com/gh/hayreddintuzel/pathinker/tree/master)
+
 ## Setting Up Development Environment
 
 Docker should be installed on your local machine
