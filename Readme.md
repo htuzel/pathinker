@@ -57,15 +57,20 @@ In related directory;
 `npm run start`: runs server for production
 `npm run test`: Runs server tests
 
+### Worker 
+
+This app depends to server and client app and ypu don't need to run it independently without docker for normal development cycle.
+
 ## DevOps
 
-Project has 5 main containers for developing environment:
+Project has 6 main containers for developing environment:
 
 1. **Front-End App** (client)
 2. **Back-End App** (server)
-3. **Nginx** (handles requests coming from browser or your local machine)
-4. **MongoDb** (main database)
-5. **Redis** (in-memory data structure store)
+3. **Cron Jobs** (worker app)
+4. **Nginx** (handles requests coming from browser or your local machine)
+5. **MongoDb** (main database)
+6. **Redis** (in-memory data structure store)
 
 FD and BD containers have a development dockerfile and can work independently.
 You don't need to use other containers independently.
@@ -92,7 +97,7 @@ For building container:
 
 For running container (macos):
 
-`docker run -p 5000:3000 -v /app/node_modules -v $(pwd):/app  <tagname>`
+`docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app  <tagname>`
 
 #### Server Container
 
