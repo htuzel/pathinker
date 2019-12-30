@@ -1,0 +1,10 @@
+{
+    "Redis": {
+        "Host": "redis",
+        "Port": "6379"
+    },
+    "Mongo": {
+        "Host": "mongo",
+        "Port": "27017"
+    }
+} 

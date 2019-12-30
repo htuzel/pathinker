@@ -7,5 +7,7 @@ jobs:
 
             - run: docker build -t hayreddintuzel/pathinker-client-test -f ./client/Dockerfile.dev ./client
             - run: docker build -t hayreddintuzel/pathinker-server-test -f ./server/Dockerfile.dev ./server
+            - run: docker build -t hayreddintuzel/pathinker-worker-test -f ./worker/Dockerfile.dev ./worker
             - run: docker run -e CI=true hayreddintuzel/pathinker-client-test npm test
             - run: docker run -e CI=true hayreddintuzel/pathinker-server-test npm test
+            - run: docker run -e CI=true hayreddintuzel/pathinker-worker-test npm test

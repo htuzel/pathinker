@@ -23,6 +23,8 @@ In related directory;
 
 **For React App:** `npx eslint .` 
 **For Express App:** `npx eslint .`
+**For Worker App:** `npx eslint .`
+
 
 ## Running Tests
 
@@ -30,6 +32,8 @@ In related directory;
 
 **For React App:** `npm test` 
 **For Express App:** `npm test`
+**For Worker App:** `npx test`
+
 
 ## Branch Strategy
 
