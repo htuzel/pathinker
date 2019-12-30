@@ -1,0 +1,11 @@
+version: 2.1
+jobs:
+    build:
+        machine: true
+        steps:
+            - checkout
+
+            - run: docker build -t hayreddintuzel/react-client-test -f ./client/Dockerfile.dev ./client
+            - run: docker build -t hayreddintuzel/react-server-test -f ./server/Dockerfile.dev ./server
+            - run: docker run -e CI=true hayreddintuzel/react-client-test npm test
+            - run: docker run -e CI=true hayreddintuzel/react-server-test npm test
