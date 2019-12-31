@@ -1,18 +1,12 @@
 import React from "react";
-import Header from "./Components/Header";
+import Header from "./Components/Header/index";
 
 function Home () {
-    const pages = [
-        { title: "Home", url: "/home" },
-        { title: "About", url: "/about" },
-        { title: "Culture", url: "#" },
-        { title: "Business", url: "#" },
-        { title: "Politics", url: "#" }
-    ];
+
     return (
         <>
-            <Header sections={pages}></Header>
-        HOME PAGE!
+            <Header></Header>
+            HOME PAGE!
         </>
     );
 }

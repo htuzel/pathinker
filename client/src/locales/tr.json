@@ -1,0 +1,12 @@
+{
+    "header": {
+        "home": "Anasayfa",
+        "about": "Hakkımızda",
+        "paths": "Path'ler",
+        "contact": "İletişim"
+    },
+
+    "seo": {
+        "logo": "Logo"
+    }
+}
