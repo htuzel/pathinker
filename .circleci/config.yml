@@ -4,7 +4,10 @@ jobs:
         machine: true
         steps:
             - checkout
-
+            - save_cache:
+                paths:
+                - node_modules
+                key: v1-dependencies-{{ checksum "package.json" }}
             - run: docker build -t hayreddintuzel/pathinker-client-test -f ./client/Dockerfile.dev ./client
             - run: docker build -t hayreddintuzel/pathinker-server-test -f ./server/Dockerfile.dev ./server
             - run: docker build -t hayreddintuzel/pathinker-worker-test -f ./worker/Dockerfile.dev ./worker
