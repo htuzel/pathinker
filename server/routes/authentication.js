@@ -21,12 +21,12 @@ module.exports = function () {
         user.save(function (err) {
             if (err) {
                 res.status(500)
-                    .send({
+                    .json({
                         success: false,
                         error: "Internal error please try again"
                     });
             } else {
-                res.status(200).send({
+                res.status(200).json({
                     success: true
                 });
             }

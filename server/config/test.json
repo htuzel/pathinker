@@ -1,0 +1,13 @@
+{
+    "Redis": {
+        "Host": "redis",
+        "Port": "6379"
+    },
+    "Mongo": {
+        "Host": "mongo",
+        "Port": "27017"
+    },
+    "Auth": {
+        "Key": "test$testerpathinker2020"
+    }
+} 

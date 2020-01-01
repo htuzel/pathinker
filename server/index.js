@@ -27,11 +27,12 @@ app.use(bodyParser.json());
 app.use(helmet());
 
 //MongoDB
-mongoose.connect("mongodb://" + mongoHost + ":" + mongoPort)
-    .catch(err => {
-        console.log(err);
-    });
-
+if (process.env.NODE_ENV !== "test") {
+    mongoose.connect("mongodb://" + mongoHost + ":" + mongoPort)
+        .catch(err => {
+            console.log(err);
+        });
+}
 //Global variables (without var, let, const)
 db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
