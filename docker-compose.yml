@@ -3,6 +3,8 @@ services:
     mongo:
         restart: always
         image: 'mongo:latest'
+        ports:
+            - '27016:27017'
     redis:
         restart: always
         image: 'redis:latest'

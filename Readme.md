@@ -21,18 +21,24 @@ For stopping and removing containers:
 
 In related directory;
 
-**For React App:** `npx eslint .` 
-**For Express App:** `npx eslint .`
-**For Worker App:** `npx eslint .`
+**For React App:** `npx eslint` 
+ 
+**For Express App:** `npx eslint` 
+
+**For Worker App:** `npx eslint` 
+
 
 
 ## Running Tests
 
 In related directory;
 
-**For React App:** `npm test` 
+**For React App:** `npm test`
+ 
 **For Express App:** `npm test`
-**For Worker App:** `npx test`
+
+**For Worker App:** `npm test`
+
 
 
 ## Branch Strategy
@@ -42,6 +48,15 @@ In related directory;
 - **Developing branch: develop**
 
 **Before pushing develop and master branch please run eslint and test scripts for client and server directories**
+
+## API Documentation
+
+[Postman Documentation](https://www.getpostman.com/collections/c41d97bfc0e62117a154) // Will change url
+
+## Connecting MongoDB with Compass
+
+- host: `localhost`
+- port: `27016`
 
 ## Basic Commands
 
