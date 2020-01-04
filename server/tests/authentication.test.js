@@ -1,8 +1,8 @@
 const request = require("supertest");
 const app = require("../index");
 
-describe("Route Tests", () => {
-    it("API status test", async () => {
+describe("Authentication Tests", () => {
+    it("Register Test", async () => {
         const response = await request(app).get("/status");
         expect(response.body.success).toBe(true);
     });

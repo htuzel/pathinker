@@ -1,6 +1,7 @@
 {
   "extends": "fbjs/strict",
   "rules": {
-    "no-console": "off"
+    "no-console": "off",
+    "max-len": "off"
   }
 }

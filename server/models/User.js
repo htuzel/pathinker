@@ -16,7 +16,8 @@ const bcrypt = require("bcryptjs"),
             type: String,
             default: "active"
         }
-    });
+    },
+    { timestamps: true });
 
 UserSchema.pre("save", function (next) {
     if (this.isNew || this.isModified("password")) {

@@ -9,6 +9,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const config = require("config");
 const redis = require("redis");
+const cookies = require("cookie-parser");
 const mongoose = require("mongoose"),
     mongoHost = config.get("Mongo.Host"),
     mongoPort = config.get("Mongo.Port");
@@ -21,17 +22,25 @@ redisClient = redis.createClient({
 });
 
 app = express();
-
+app.use(cookies());
 app.use(cors());
 app.use(bodyParser.json());
 app.use(helmet());
 
 //MongoDB
 if (process.env.NODE_ENV !== "test") {
-    mongoose.connect("mongodb://" + mongoHost + ":" + mongoPort)
-        .catch(err => {
-            console.log(err);
-        });
+    if (process.env.NODE_ENV !== "production") {
+        mongoose.connect("mongodb://" + mongoHost + ":" + mongoPort,
+            { autoIndex: false })
+            .catch(err => {
+                console.log(err);
+            });
+    } else {
+        mongoose.connect("mongodb://" + mongoHost + ":" + mongoPort)
+            .catch(err => {
+                console.log(err);
+            });
+    }
 }
 //Global variables (without var, let, const)
 db = mongoose.connection;
