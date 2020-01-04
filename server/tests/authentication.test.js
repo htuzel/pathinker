@@ -7,8 +7,4 @@ describe("Authentication Tests", () => {
         expect(response.body.success).toBe(true);
     });
 
-    test("", async () => {
-        const response = await request(app).get("/status");
-        expect(response.body.success).toBe(true);   
-    });
 });
