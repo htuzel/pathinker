@@ -18,3 +18,11 @@
         width: 100%;
     }
 }
+
+.bg-1 {
+    background-image: url('../images/background/bg-1.png'), url('../images/background//bg-2.png'), url('../images/background//bg-3.png');
+    background-size: 1044px 998px, 1164px 1075px, 1122px 1137px;
+    background-position: 583px 583px, -159px 1573px, 556px 2649px;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    min-height: 4000px;
+}

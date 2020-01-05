@@ -37,5 +37,5 @@ export default {
             .min(2, T('validation.tooShort'))
             .max(500, T('validation.tooLong'))
             .required(T('validation.required'));
-    },
+    }
 }

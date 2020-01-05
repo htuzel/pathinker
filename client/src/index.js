@@ -4,6 +4,7 @@ import { StoreContext } from 'redux-react-hook';
 import Routes from './route';
 import * as serviceWorker from './serviceWorker';
 import store from './store';
+import 'bootstrap/dist/css/bootstrap.css';
 
 import './i18n';
 

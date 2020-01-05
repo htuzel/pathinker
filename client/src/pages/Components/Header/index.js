@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useContext} from "react";
 import { useMediaQuery } from "react-responsive";
-import { Container, Divider } from "@material-ui/core";
+import { Container, Divider, Box } from "@material-ui/core";
 import { HeaderBar } from "../Styled/index";
 import DesktopHeader from "./DesktopHeader";
 import MobileHeader from "./MobileHeader";
@@ -45,11 +45,13 @@ export default function Header (props) {
 
     return (
         <Container>
-            <HeaderBar>
-                {isDesktopOrLaptop && <DesktopHeader pages={pages}></DesktopHeader>}
-                {!isDesktopOrLaptop && <MobileHeader pages={pages}></MobileHeader>}
-            </HeaderBar>
-            <Divider></Divider>
+            <Box mb={8}>
+                <HeaderBar>
+                    {isDesktopOrLaptop && <DesktopHeader pages={pages}></DesktopHeader>}
+                    {!isDesktopOrLaptop && <MobileHeader pages={pages}></MobileHeader>}
+                </HeaderBar>
+                <Divider></Divider>
+            </Box>
         </Container>
     );
 }

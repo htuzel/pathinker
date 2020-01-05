@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Grid } from "@material-ui/core";
+import { Grid, Paper } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 export const HeaderBar = styled(Grid)`
@@ -9,12 +9,12 @@ export const HeaderBar = styled(Grid)`
     display: flex;
 `,
 
-    NavLink = styled.span`
+NavLink = styled.span`
     padding-top: 25px;
     display: inline-block;
 `,
 
-    MenuLink = styled(Link)`
+MenuLink = styled(Link)`
     color: #4a9a57;
     text-decoration: none;
     font-weight: 700;
@@ -26,19 +26,19 @@ export const HeaderBar = styled(Grid)`
     }
 `,
 
-    DesktopLogo = styled.img`
+DesktopLogo = styled.img`
     width: 180px;
     margin-right: 45px;
     flex:0.4;
 `,
 
-    MobileLogo = styled.img`
+MobileLogo = styled.img`
     width: 180px;
     margin-right: 45px;
     flex:4;
 `,
 
-    DesktopMenus = styled.div`
+DesktopMenus = styled.div`
     flex:2;
     padding-left: 220px;
     display:flex;
@@ -49,7 +49,7 @@ export const HeaderBar = styled(Grid)`
     }
 `,
 
-    MobileMenus = styled.div`
+MobileMenus = styled.div`
     flex: 0.4;
     flex-flow: row-reverse wrap;
     @media (min-width: 768px) {
@@ -61,4 +61,9 @@ export const HeaderBar = styled(Grid)`
     display: flex;
     flex-direction:column;
     padding: 25px;
+`,
+
+SPaper = styled(Paper)`
+    padding: 30px;
+    color: #ffffff
 `;
