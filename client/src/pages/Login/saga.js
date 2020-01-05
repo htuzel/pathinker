@@ -3,18 +3,19 @@ import types from "./types";
 import WebClient from "../../helpers/webClient";
 import { history } from '../../helpers/history';
 
-function* fetchRegister (data) {
+function* fetchLogin (data) {
     try {
-        const response = yield call(WebClient.register, data.payload);
+        console.log('AAAA')
+        const response = yield call(WebClient.login, data.payload);
         console.log('response:', response);
-        yield put({ type: types.REGISTER_SUCCESS, payload: response });
+        yield put({ type: types.LOGIN_SUCCESS, payload: response });
         history.push('/dashboard');
     } catch (error) {
-        yield put({ type: types.REGISTER_FAILURE });
+        yield put({ type: types.LOGIN_FAILURE });
         history.push('/dashboard');
     }
 }
 
 export default function* watchRegisterAction() {
-    yield takeEvery(types.REGISTER_REQUEST, fetchRegister);
+    yield takeEvery(types.LOGIN_REQUEST, fetchLogin);
 }

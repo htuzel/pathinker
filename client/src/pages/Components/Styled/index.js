@@ -15,11 +15,11 @@ export const HeaderBar = styled(Grid)`
 `,
 
     MenuLink = styled(Link)`
-    color: palevioletred;
+    color: #4a9a57;
     text-decoration: none;
     font-weight: 700;
     &:visited {
-        color: palevioletred;
+        color: #4a9a57;
     }
     &:hover {
         color: #737373;

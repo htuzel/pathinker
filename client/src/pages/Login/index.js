@@ -7,11 +7,11 @@ import { useDispatch, useMappedState } from "redux-react-hook";
 import types from "./types";
 import Header from "../components/Header";
 
-function Register() {
+function Login() {
     const [t] = useTranslation();
     const dispatch = useDispatch();
 
-    const { registered, user, isLoading, error } = useMappedState(mapState);
+    const { isLogin, user, isLoading, error } = useMappedState(mapState);
 
     const validationSchema = Yup.object().shape({
         email: Validate.Email(),
@@ -31,13 +31,14 @@ function Register() {
         validationSchema,
         onSubmit: values => {
             console.log(values);
-            dispatch({ type: types.REGISTER_LOADING });
-            dispatch({ type: types.REGISTER_REQUEST, payload: values });
+            dispatch({ type: types.LOGIN_LOADING });
+            dispatch({ type: types.LOGIN_REQUEST, payload: values });
         },
     });
     return (
         <>
-        <Header form="register"></Header>
+        <Header></Header>
+        LOGIN
         <form onSubmit={formik.handleSubmit}>
             <label htmlFor="email">Email Address</label>
             <input name="email" {...formik.getFieldProps('email')} />
@@ -52,7 +53,7 @@ function Register() {
             <button type="submit">Submit</button>
             {isLoading && "hiii!"}
             {isLoading}
-            {registered}
+            {isLogin}
             {user}
             {error}
     </form>
@@ -62,10 +63,10 @@ function Register() {
 }
 
 const mapState = state => ({
-    registered: state.isRegistered,
+    isLogin: state.isLogin,
     isLoading: state.isLoading,
     user: state.user,
     error: state.error
 });
 
-export default Register;
+export default Login;

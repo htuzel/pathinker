@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Master from './pages/Master';
 import Dashboard from './pages/Dashboard';
 import Register from './pages/Register';
+import Login from './pages/Login';
 import { history } from './helpers/history';   
 import {StoreContext} from 'redux-react-hook';
 
@@ -23,6 +24,7 @@ const Routes = () => {
                 <RouterSwitch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/register" component={Register} />
+                    <Route exact path="/login" component={Login} />
                     <PrivateRoute exact path="/dashboard" component={Dashboard} />
                 </RouterSwitch>
             </Master>

@@ -9,7 +9,9 @@ export default function Header (props) {
 
     const pages = [
         { title: "Home", url: "/home", id:1},
-        { title: "About", url: "/about", id:2}
+        { title: "About", url: "/about", id:2},
+        { title: "Login", url: "/login", id:3},
+        { title: "Register", url: "/register", id:4}
     ];
 
     const isDesktopOrLaptop = useMediaQuery({
