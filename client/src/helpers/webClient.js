@@ -6,7 +6,7 @@ async function Requester({ url, method = "get", data = null }) {
         url:  "/api/" + url,
         data,
         headers:{
-            'USER-AUTH-TOKEN':sessionStorage.getItem('jwtToken'),
+            'authorization': 'Bearer ' + sessionStorage.getItem('token'),
             'Content-Type':'application/json'
         }
     })

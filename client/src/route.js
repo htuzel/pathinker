@@ -12,7 +12,7 @@ const Routes = () => {
     const store = useContext(StoreContext);  
     const PrivateRoute = ({ component: Component, ...rest }) => (
         <Route {...rest} render={(props) => (
-            (store.getState().registerReducer.isRegistered === true)
+            (store.getState().loginReducer.isLogin === true)
                 ? <Component {...props} />
                 : <Redirect to='/register' />
         )} />
