@@ -25,8 +25,15 @@ module.exports = function () {
                         error: "Internal error please try again"
                     });
             } else {
+                const payload = {
+                    email
+                },
+                token = jwt.sign(payload, config.get("Auth.Key"), {
+                    expiresIn: "24h"
+                });
                 res.status(200).json({
-                    success: true
+                    success: true,
+                    token
                 });
             }
         });
@@ -76,10 +83,11 @@ module.exports = function () {
                             token = jwt.sign(payload, config.get("Auth.Key"), {
                                 expiresIn: "24h"
                             });
-                        res.cookie("token", token, {
-                            httpOnly: true
-                        })
-                            .sendStatus(200);
+                        res.sendStatus(200).
+                            send({
+                            success: true,
+                            token
+                            });
                     }
                 });
             }

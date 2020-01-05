@@ -1,6 +1,6 @@
 /*global redisClient, app*/
 
-const cookieJwt = require("../middlewares/cookieJwt");
+const jwtAuth = require("../middlewares/jwtAuth");
 
 module.exports = function () {
 
@@ -24,7 +24,7 @@ module.exports = function () {
         });
     });
 
-    app.get("/jwt-test", cookieJwt, (req, res) => {
+    app.get("/jwt-test", jwtAuth, (req, res) => {
         res.json({
             "success": true
         });

@@ -9,7 +9,6 @@ const cors = require("cors");
 const helmet = require("helmet");
 const config = require("config");
 const redis = require("redis");
-const cookies = require("cookie-parser");
 const mongoose = require("mongoose"),
     mongoHost = config.get("Mongo.Host"),
     mongoPort = config.get("Mongo.Port");
@@ -22,7 +21,6 @@ redisClient = redis.createClient({
 });
 
 app = express();
-app.use(cookies());
 app.use(cors());
 app.use(bodyParser.json());
 app.use(helmet());
