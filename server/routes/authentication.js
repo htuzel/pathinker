@@ -12,8 +12,7 @@ module.exports = function () {
         const {
                 email,
                 password
-            } = req.query,
-
+            } = req.body,
             user = new User({
                 email,
                 password
@@ -38,7 +37,7 @@ module.exports = function () {
         const {
             email,
             password
-        } = req.query;
+        } = req.body;
         User.findOne({
             email
         }, function (err, user) {
