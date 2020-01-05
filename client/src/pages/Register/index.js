@@ -87,7 +87,6 @@ function Register() {
                             />}
                             label="I want to receive inspiration, marketing promotions and updates via email."
                         />
-                        <FormHelperText color="red">{(formik.errors.agreement && formik.touched.agreement) && formik.errors.agreement}</FormHelperText>
                     </Grid>
                     <Button
                         type="submit"
