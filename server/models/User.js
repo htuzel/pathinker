@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const uniqueValidator = require('mongoose-unique-validator');
 const bcrypt = require("bcryptjs"),
 
     saltRounds = 5,
@@ -45,5 +46,7 @@ UserSchema.methods.isCorrectPassword = function (password, callback) {
         }
     });
 };
+
+UserSchema.plugin(uniqueValidator);
 
 module.exports = mongoose.model("User", UserSchema);
