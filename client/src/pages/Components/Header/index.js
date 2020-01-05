@@ -1,18 +1,43 @@
-import React from "react";
+import React, {useState, useEffect, useContext} from "react";
 import { useMediaQuery } from "react-responsive";
 import { Container, Divider } from "@material-ui/core";
 import { HeaderBar } from "../Styled/index";
 import DesktopHeader from "./DesktopHeader";
 import MobileHeader from "./MobileHeader";
+import {StoreContext} from 'redux-react-hook';
 
 export default function Header (props) {
 
-    const pages = [
-        { title: "Home", url: "/home", id:1},
-        { title: "About", url: "/about", id:2},
-        { title: "Login", url: "/login", id:3},
-        { title: "Register", url: "/register", id:4}
+    const store = useContext(StoreContext);  
+
+    const allpages = [
+        {id:1, title: "Home", url: "/home", access:"everybody"},
+        {id:2, title: "About", url: "/about", access:"everybody"},
+        {id:3, title: "Login", url: "/login", access:"notLogin"},
+        {id:4, title: "Register", url: "/register", access:"notLogin"},
+        {id:5, title: "Logout", url: "/logout", access:"login"}
     ];
+
+    const [pages, setPages] = useState(allpages);
+
+    useEffect(() => {
+        let allpages = pages;
+        let newPages = [];
+        if (store.getState().loginReducer.isLogin === true) {
+            allpages.forEach(element => {
+                if (element.access !== 'notLogin') {
+                    newPages.push(element);
+                }
+            });
+        } else {
+            allpages.forEach(element => {
+                if (element.access !== 'login') {
+                    newPages.push(element);
+                }
+            });
+        }
+        setPages(newPages);
+    }, []);
 
     const isDesktopOrLaptop = useMediaQuery({
         query: "(min-device-width: 1224px)"

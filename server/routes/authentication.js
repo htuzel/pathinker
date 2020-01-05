@@ -83,10 +83,10 @@ module.exports = function () {
                             token = jwt.sign(payload, config.get("Auth.Key"), {
                                 expiresIn: "24h"
                             });
-                        res.sendStatus(200).
+                        res.status(200).
                             send({
-                            success: true,
-                            token
+                                success: true,
+                                token
                             });
                     }
                 });

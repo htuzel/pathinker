@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { Router, Route, Redirect, Switch as RouterSwitch } from 'react-router-dom';
 import Home from './pages/Home';
 import Master from './pages/Master';
