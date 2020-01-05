@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates:700|Open+Sans:400,700");
+/*font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'Open Sans', sans-serif;*/
+@import "./reset.scss";
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #ffffff;
+    font-family: 'Nunito', sans-serif;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat Arnates";
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    color: #F93C88;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+img {
+    display: inline-block;
+}
+
+.input-field-error {
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+}
+
+.flags {
+    width: 20px;
+    padding: 10px 2px 0;
+    float: right;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.flag-wrapper {
+    padding: 0 50px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+@import "./pages/home.scss";
+

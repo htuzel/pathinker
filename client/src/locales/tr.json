@@ -1,12 +1,11 @@
 {
-    "header": {
-        "home": "Anasayfa",
-        "about": "Hakkımızda",
-        "paths": "Path'ler",
-        "contact": "İletişim"
-    },
-
-    "seo": {
-        "logo": "Logo"
+    "validation": {
+        "tooShort": "Too Short!",
+        "tooLong": "Too Long!",
+        "required": "Required",
+        "invalidEmail": "Invalid email",
+        "shortPassword": "Password is too short - should be 8 chars minimum",
+        "matchPassword": "Password can only contain Latin letters",
+        "invalidPhone": "Phone number is not valid"
     }
 }

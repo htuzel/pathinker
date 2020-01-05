@@ -1,0 +1,20 @@
+.home-page {
+    padding: 80px 100px 130px 170px;
+
+    .left {
+        max-width: 440px;
+        padding-top: 160px;
+
+        h1 {
+            margin-bottom: 65px;
+        }
+
+        p {
+            line-height: 37px;
+        }
+    }
+    img {
+        max-width: 680px;
+        width: 100%;
+    }
+}
