@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { Grid, Paper } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
+const primary = "#4A9A57";
+const secondary = "#B3324C";
+
 export const HeaderBar = styled(Grid)`
     min-height: 50px;
     margin-top: 10px;
@@ -15,14 +18,16 @@ NavLink = styled.span`
 `,
 
 MenuLink = styled(Link)`
-    color: #4a9a57;
+    color: ${primary};
     text-decoration: none;
     font-weight: 700;
+
     &:visited {
-        color: #4a9a57;
+        color: ${primary};
     }
     &:hover {
-        color: #737373;
+        color: ${secondary};
+        text-decoration: none;
     }
 `,
 
@@ -61,6 +66,18 @@ MobileMenus = styled.div`
     display: flex;
     flex-direction:column;
     padding: 25px;
+`,
+
+SLink = styled(Link)`
+    color: ${primary};
+
+    &:visited {
+        color: ${primary};
+    }
+    &:hover {
+        color: ${secondary};
+        text-decoration: none;
+    }
 `,
 
 SPaper = styled(Paper)`

@@ -7,9 +7,10 @@ import { useDispatch, useMappedState } from "redux-react-hook";
 import types from "./types";
 import Header from "../components/Header";
 //Material UI
-import {Avatar, Button, TextField, Checkbox, Link, Grid, Typography, Container, FormControlLabel, FormHelperText} from '@material-ui/core';
+import {Avatar, Button, TextField, Checkbox, Grid, Typography, Container, FormControlLabel} from '@material-ui/core';
+import { Link } from "react-router-dom";
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import { SPaper } from "../components/Styled";
+import { SPaper, SLink } from "../components/Styled";
 
 function Register() {
     const [t] = useTranslation();
@@ -100,9 +101,9 @@ function Register() {
                 </Grid>
                 <Grid container justify="flex-end">
                     <Grid item className="mt-4">
-                        <Link href="#" variant="body2">
+                        <SLink to="/login">
                             Already have an account? Sign in
-                        </Link>
+                        </SLink>
                     </Grid>
                 </Grid>
             </form>
