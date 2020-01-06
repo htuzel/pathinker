@@ -9,7 +9,7 @@ import Header from "../components/Header";
 //Material UI
 import {Avatar, Button, TextField, Checkbox, Grid, Typography, Container, FormControlLabel} from '@material-ui/core';
 import { Link } from "react-router-dom";
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import LockOutlinedIcon from '@material-ui/icons/AccountCircle';
 import { SPaper, SLink } from "../components/Styled";
 
 function Register() {
@@ -73,6 +73,7 @@ function Register() {
                     <Grid item xs={12}>
                         <TextField fullWidth
                         {...formik.getFieldProps('password')}
+                        type="password"
                         placeholder={t('placeholder.password')}
                         error={formik.errors.password && formik.touched.password}
                         helperText={(formik.errors.password && formik.touched.password) && formik.errors.password}

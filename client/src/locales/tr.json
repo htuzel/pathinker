@@ -20,6 +20,10 @@
         "agree": "Kullanım şartlarını kabul ediyorum.",
         "already": "Zaten bir hesabın var mı? Giriş yap!"
     },
+    "login": {
+        "signin": "Giriş Yap",
+        "already": "Hesabın Yok mu? Kaydol"
+    },
     "placeholder": {
         "email": "örnek@email.com",
         "password": "parola"

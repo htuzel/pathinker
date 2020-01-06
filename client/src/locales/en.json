@@ -16,9 +16,13 @@
         "logout": "Logout"
     },
     "register": {
-        "signup": "Sign Up",
+        "signup": "Register",
         "agree": "I agree to the terms of service.",
-        "already": "Already have an account? Sign in"
+        "already": "Already have an account? Login"
+    },
+    "login": {
+        "signin": "Login",
+        "already": "You haven't got an account? Register"
     },
     "placeholder": {
         "email": "you@email.com",
