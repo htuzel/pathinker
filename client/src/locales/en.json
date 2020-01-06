@@ -7,5 +7,21 @@
         "shortPassword": "Password is too short - should be 8 chars minimum",
         "matchPassword": "Password can only contain Latin letters",
         "invalidPhone": "Phone number is not valid"
+    },
+    "menu": {
+        "home": "Home",
+        "about": "About",
+        "login": "Login",
+        "register": "Register",
+        "logout": "Logout"
+    },
+    "register": {
+        "signup": "Sign Up",
+        "agree": "I agree to the terms of service.",
+        "already": "Already have an account? Sign in"
+    },
+    "placeholder": {
+        "email": "you@email.com",
+        "password": "password"
     }
 }

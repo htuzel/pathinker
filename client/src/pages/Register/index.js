@@ -26,12 +26,9 @@ function Register() {
     });
 
     const account = {
-        email: "hayreddintuzel@gmail.com",
-        password: "12345678",
+        email: "",
+        password: "",
     };
-
-    /* Delete this variable (refactor required) */
-    const errorStyle = { padding: "20px 0", color: "red" };
 
     const handleChange = event => {
         setisAgree(event.target.checked);
@@ -57,8 +54,8 @@ function Register() {
                 </Avatar>
             </Grid>
             <Grid container justify="center" className="mt-2">
-                <Typography component="h1" variant="h5">
-                    Sign up
+                <Typography component="h1" variant="h5" color="primary">
+                    {t("register.signup")}
                 </Typography>
             </Grid>
             <form onSubmit={formik.handleSubmit} className="px-4 mt-4">
@@ -66,6 +63,7 @@ function Register() {
                     <Grid item xs={12}>
                         <TextField fullWidth
                         {...formik.getFieldProps('email')}
+                        placeholder={t('placeholder.email')}
                         error={formik.errors.email && formik.touched.email}
                         helperText={(formik.errors.email && formik.touched.email) && formik.errors.email}
                         />
@@ -75,6 +73,7 @@ function Register() {
                     <Grid item xs={12}>
                         <TextField fullWidth
                         {...formik.getFieldProps('password')}
+                        placeholder={t('placeholder.password')}
                         error={formik.errors.password && formik.touched.password}
                         helperText={(formik.errors.password && formik.touched.password) && formik.errors.password}
                         />
@@ -86,7 +85,7 @@ function Register() {
                             control={<Checkbox  {...formik.getFieldProps('agreement')}  
                             onChange={handleChange}                        
                             />}
-                            label="I want to receive inspiration, marketing promotions and updates via email."
+                            label={t('register.agree')}
                         />
                     </Grid>
                     <Button
@@ -96,13 +95,13 @@ function Register() {
                         color="primary"
                         disabled={!isAgree}
                     >
-                    Sign Up
+                    {t("register.signup")}
                     </Button>
                 </Grid>
                 <Grid container justify="flex-end">
                     <Grid item className="mt-4">
                         <SLink to="/login">
-                            Already have an account? Sign in
+                            {t("register.already")}
                         </SLink>
                     </Grid>
                 </Grid>

@@ -11,11 +11,11 @@ export default function Header (props) {
     const store = useContext(StoreContext);  
 
     const allpages = [
-        {id:1, title: "Home", url: "/home", access:"everybody"},
-        {id:2, title: "About", url: "/about", access:"everybody"},
-        {id:3, title: "Login", url: "/login", access:"notLogin"},
-        {id:4, title: "Register", url: "/register", access:"notLogin"},
-        {id:5, title: "Logout", url: "/logout", access:"login"}
+        {id:1, title: "menu.home", url: "/home", access:"everybody"},
+        {id:2, title: "menu.about", url: "/about", access:"everybody"},
+        {id:3, title: "menu.login", url: "/login", access:"notLogin"},
+        {id:4, title: "menu.register", url: "/register", access:"notLogin"},
+        {id:5, title: "menu.logout", url: "/logout", access:"login"}
     ];
 
     const [pages, setPages] = useState(allpages);
